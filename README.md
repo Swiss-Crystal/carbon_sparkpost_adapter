@@ -25,7 +25,7 @@ require "carbon_sparkpost_adapter"
 
 BaseEmail.configure do |settings|
  if Lucky::Env.production?
-   spark_post_key = send_grid_key_from_env
+   spark_post_key = spark_post_key_from_env
    settings.adapter = Carbon::SparkPostAdapter.new(api_key: spark_post_key)
  else
   settings.adapter = Carbon::DevAdapter.enw
