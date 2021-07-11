@@ -32,7 +32,7 @@ class Carbon::SparkPostAdapter < Carbon::Adapter
 
     def params
       {
-        options: options,
+        options:    options,
         content:    mail_content,
         recipients: recipient_list,
       }
@@ -40,7 +40,7 @@ class Carbon::SparkPostAdapter < Carbon::Adapter
 
     def options
       {
-        sandbox: sandbox?
+        sandbox: sandbox?,
       }
     end
 
@@ -60,7 +60,7 @@ class Carbon::SparkPostAdapter < Carbon::Adapter
         from: {
           name:  email.from.name,
           email: email.from.address,
-      }.to_h,
+        }.to_h,
         subject: email.subject,
         text:    email.text_body,
         html:    email.html_body,

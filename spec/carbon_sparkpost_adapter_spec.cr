@@ -3,15 +3,15 @@ require "./spec_helper"
 describe Carbon::SparkPostAdapter do
   # Only enable with proper setup
   {% if flag?("with-integration") %}
-  describe "deliver_now" do
-    it "delivers the email successfully" do
-      send_email_to_spark_post text_body: "THIS IS A MESSAGE FROM US",
-        from: Carbon::Address.new("anything@sparkpostbox.com"),
-        subject: "CARBON TEST MAIL",
-        html_body: "<b>WOW</b>",
-        to: [Carbon::Address.new("random@mail.com")]
+    describe "deliver_now" do
+      it "delivers the email successfully" do
+        send_email_to_spark_post text_body: "THIS IS A MESSAGE FROM US",
+          from: Carbon::Address.new("anything@sparkpostbox.com"),
+          subject: "CARBON TEST MAIL",
+          html_body: "<b>WOW</b>",
+          to: [Carbon::Address.new("random@mail.com")]
+      end
     end
-  end
   {% end %}
 
   describe "params" do
