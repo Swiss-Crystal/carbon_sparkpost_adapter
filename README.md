@@ -52,4 +52,4 @@ end
 
 ## Contributors
 
-- [Nick Flueckiger](https://github.com/Liberatys) - maintainer
+- [Liberatys](https://github.com/Liberatys) - maintainer
